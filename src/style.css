@@ -1,0 +1,47 @@
+h1 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  margin: 45px 250px 20px;
+}
+h2 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  font-size: 22px;
+  margin: 10px 225px;
+}
+
+.search,
+.btn-info {
+  margin: 5px 590px;
+}
+.main-image {
+  width: 125px;
+  margin: -10px 250px;
+}
+.main-temp {
+  font-family: "Roboto Slab", serif;
+  font-weight: 500;
+  font-size: 45px;
+  margin-top: 20px;
+  margin-left: -250px;
+}
+.row {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 55px;
+}
+.days-temp {
+  margin-left: 195px;
+}
+.sun,
+.mon,
+.tue,
+.wed,
+.thu {
+  font-family: "Roboto Slab", serif;
+  font-weight: 500;
+  width: 50px;
+  margin-top: -45px;
+  margin-left: 195px;
+}
