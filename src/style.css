@@ -1,25 +1,28 @@
 h1 {
   font-family: "Roboto Slab", serif;
   font-weight: 700;
-  margin: 45px 250px 20px;
+  margin: 45px 140px 20px;
 }
 h2 {
   font-family: "Roboto Slab", serif;
   font-weight: 400;
   font-size: 25px;
-  margin: 10px 225px;
+  margin: 10px 125px;
 }
 .humid,
 .wind {
   font-family: "Roboto Slab", serif;
   font-weight: 300;
   font-size: 22px;
-  margin: 10px 225px;
+  margin: 10px 125px;
 }
 
 .search,
 .btn-info {
   margin: 5px 450px;
+}
+.search {
+  margin-top: -25px;
 }
 .main-image {
   width: 125px;
