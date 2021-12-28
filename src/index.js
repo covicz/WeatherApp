@@ -13,11 +13,11 @@ let days = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday","Sat
 let day = days[now.getDay()];
 
 h2.innerHTML = `${day} ${hours}:${minutes}`
+ 
 
 function showTemperature(response) {
    document.querySelector("#city").innerHTML = response.data.name;
    document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp)+`°C Today`;
- 
 }
 
 function search(event){
