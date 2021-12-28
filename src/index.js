@@ -20,7 +20,18 @@ function showTemperature(response) {
    document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp)+`°C Today`;
    document.querySelector("#humidity").innerHTML = `Humidity: `+ (response.data.main.humidity)+` %`;
    document.querySelector("#wind").innerHTML = 'Wind: '+ Math.round(response.data.wind.speed)+` km/h`;
+   let icon = document.querySelector("#icon");
+   icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
+   
+ 
+ 
+  
+
+
 
 function search(event){
 event.preventDefault();
