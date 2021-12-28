@@ -5,8 +5,8 @@ h1 {
 }
 h2 {
   font-family: "Roboto Slab", serif;
-  font-weight: 300;
-  font-size: 22px;
+  font-weight: 400;
+  font-size: 25px;
   margin: 10px 225px;
 }
 .humid,
@@ -56,4 +56,8 @@ h2 {
   font-family: "Roboto Slab", serif;
   font-size: 15px;
   margin-left: 450px;
+}
+.weatherApp {
+  margin: 0 auto;
+  border: 2px solid #bae8e8;
 }
