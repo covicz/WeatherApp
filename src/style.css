@@ -19,7 +19,7 @@ h2 {
 
 .search,
 .btn-info {
-  margin: 5px 590px;
+  margin: 5px 450px;
 }
 .main-image {
   width: 125px;
@@ -55,9 +55,14 @@ h2 {
 .git-link {
   font-family: "Roboto Slab", serif;
   font-size: 15px;
-  margin-left: 450px;
+  margin-left: 550px;
 }
-.weatherApp {
-  margin: 30px auto;
-  border: 2px solid #bae8e8;
+.weatherapp {
+  border: 5px solid #d9f2ff;
+  margin: 35px auto;
+  padding: 5px;
+  width: 950px;
+}
+.container {
+  display: block;
 }
