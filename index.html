@@ -23,56 +23,58 @@
   </head>
   <body>
     <div class="container">
-      <h1 id="city">London</h1>
-      <h2></h2>
+      <div class="weatherapp">
+        <h1 id="city">London</h1>
+        <h2></h2>
 
-      <div class="humid">Humidity: 65%</div>
-      <div class="wind">Wind: 3km/h</div>
+        <div class="humid">Humidity: 65%</div>
+        <div class="wind">Wind: 3km/h</div>
 
-      <form id="search-form">
-        <div class="search">
-          <input
-            type="text"
-            placeholder="Type your city..."
-            id="search-city-input"
-          />
-        </div>
-        <input type="submit" class="btn btn-info" />
-      </form>
+        <form id="search-form">
+          <div class="search">
+            <input
+              type="text"
+              placeholder="Type your city..."
+              id="search-city-input"
+            />
+          </div>
+          <input type="submit" class="btn btn-info" />
+        </form>
 
-      <div class="row">
-        <div class="col">
-          <img src="images/cloudy.png" class="main-image" />
+        <div class="row">
+          <div class="col">
+            <img src="images/cloudy.png" class="main-image" />
+          </div>
+          <div class="col">
+            <div class="main-temp" id="temperature">15°C Today</div>
+          </div>
         </div>
-        <div class="col">
-          <div class="main-temp" id="temperature">15°C Today</div>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-1">
-          <div class="days-temp">SUN<br />11°</div>
+        <div class="row">
+          <div class="col-1">
+            <div class="days-temp">SUN<br />11°</div>
+          </div>
+          <div class="col-1">
+            <div class="days-temp">MON<br />10°</div>
+          </div>
+          <div class="col-1">
+            <div class="days-temp">TUE<br />15°</div>
+          </div>
+          <div class="col-1">
+            <div class="days-temp">WED<br />17°</div>
+          </div>
+          <div class="col-1">
+            <div class="days-temp">THU<br />20°</div>
+          </div>
         </div>
-        <div class="col-1">
-          <div class="days-temp">MON<br />10°</div>
-        </div>
-        <div class="col-1">
-          <div class="days-temp">TUE<br />15°</div>
-        </div>
-        <div class="col-1">
-          <div class="days-temp">WED<br />17°</div>
-        </div>
-        <div class="col-1">
-          <div class="days-temp">THU<br />20°</div>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-1"><img src="images/storm.png" class="sun" /></div>
-        <div class="col-1"><img src="images/rainy.png" class="mon" /></div>
-        <div class="col-1"><img src="images/cloudy.png" class="tue" /></div>
-        <div class="col-1"><img src="images/cloudy.png" class="wed" /></div>
-        <div class="col-1"><img src="images/sunny.png" class="thu" /></div>
+        <div class="row">
+          <div class="col-1"><img src="images/storm.png" class="sun" /></div>
+          <div class="col-1"><img src="images/rainy.png" class="mon" /></div>
+          <div class="col-1"><img src="images/cloudy.png" class="tue" /></div>
+          <div class="col-1"><img src="images/cloudy.png" class="wed" /></div>
+          <div class="col-1"><img src="images/sunny.png" class="thu" /></div>
+        </div>
       </div>
     </div>
     <script src="src/index.js"></script>
