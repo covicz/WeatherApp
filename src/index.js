@@ -18,6 +18,8 @@ h2.innerHTML = `${day} ${hours}:${minutes}`
 function showTemperature(response) {
    document.querySelector("#city").innerHTML = response.data.name;
    document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp)+`°C Today`;
+   document.querySelector("#humidity").innerHTML = `Humidity: `+ (response.data.main.humidity)+` %`;
+   document.querySelector("#wind").innerHTML = 'Wind: '+ Math.round(response.data.wind.speed)+` km/h`;
 }
 
 function search(event){
