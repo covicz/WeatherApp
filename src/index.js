@@ -17,7 +17,7 @@ h2.innerHTML = `${day} ${hours}:${minutes}`
 
 function showTemperature(response) {
    document.querySelector("#city").innerHTML = response.data.name;
-   document.querySelector("#temperature").innerHTML = Math.round(celsiusTemperature);
+   document.querySelector("#temperature").innerHTML = Math.round(celsiusTemperature)+`°C|°F`;
    document.querySelector("#humidity").innerHTML = `Humidity: `+ (response.data.main.humidity)+` %`;
    document.querySelector("#wind").innerHTML = 'Wind: '+ Math.round(response.data.wind.speed)+` km/h`;
    celsiusTemperature = response.data.main.temp;
