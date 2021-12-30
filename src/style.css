@@ -19,6 +19,7 @@ h2 {
 
 .search,
 .btn-info {
+  color: #d9f2ff;
   margin: 5px 450px;
   width: 100px;
 }
@@ -63,10 +64,8 @@ h2 {
 }
 .weatherapp {
   border: 5px solid #d9f2ff;
+  border-radius: 20px;
   margin: 35px auto;
   padding: 5px;
   width: 850px;
-}
-.container {
-  display: block;
 }
