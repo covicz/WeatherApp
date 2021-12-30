@@ -17,10 +17,11 @@ h2.innerHTML = `${day} ${hours}:${minutes}`
 
 function showTemperature(response) {
    document.querySelector("#city").innerHTML = response.data.name;
-   document.querySelector("#temperature").innerHTML = Math.round(celsiusTemperature)+`°C|°F`;
+   celsiusTemperature = response.data.main.temp;
+   document.querySelector("#temperature").innerHTML = Math.round(celsiusTemperature);
    document.querySelector("#humidity").innerHTML = `Humidity: `+ (response.data.main.humidity)+` %`;
    document.querySelector("#wind").innerHTML = 'Wind: '+ Math.round(response.data.wind.speed)+` km/h`;
-   celsiusTemperature = response.data.main.temp;
+   
    let icon = document.querySelector("#icon");
    icon.setAttribute(
     "src",
@@ -42,12 +43,12 @@ function showFahrenheitTemperature(event){
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
   let fahrenheitTemperature = (celsiusTemperature*9)/5+32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature)+`°C|°F`;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 function showCelsiusTemperature(event){
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature)+`°C|°F`;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 
