@@ -13,7 +13,28 @@ let days = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday","Sat
 let day = days[now.getDay()];
 
 h2.innerHTML = `${day} ${hours}:${minutes}`
- 
+
+function displayWeekly(){
+  let weeklyElement = document.querySelector("#weekly");
+
+  let weeklyHTML = `<div class="row">`;
+  let days =["Sun", "Mon", "Tue", "Wed", "Thu","Fri",];
+  days.forEach(function(day){weeklyHTML = weeklyHTML + `
+  
+            <div class="col-2">
+              <div class="weather-days">${day}</div>
+              <img src="images/cloudy.png" alt="" width="36px" />
+              <div class="temp-days">
+                <span class="temp-days-max">11°</span>
+                <span class="temp-days-min">12°</span>
+              </div>
+            </div>
+          `;
+  })
+   
+          weeklyHTML = weeklyHTML+`</div>`;        
+  weeklyElement.innerHTML = weeklyHTML;
+}
 
 function showTemperature(response) {
    document.querySelector("#city").innerHTML = response.data.name;
@@ -53,6 +74,8 @@ function showCelsiusTemperature(event){
 
 
 let celsiusTemperature = null;
+
+displayWeekly();
 
 let form = document.querySelector("form");
 form.addEventListener("submit", search);
