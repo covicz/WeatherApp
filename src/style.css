@@ -37,35 +37,31 @@ h2 {
   margin-top: 20px;
   margin-left: -250px;
 }
-.row {
+
+.weather-week,
+.weather-days,
+.temp-days {
   font-family: "Roboto Slab", serif;
   font-weight: 700;
   font-size: 20px;
-  margin-top: 55px;
+  margin-top: 20px;
+  text-align: center;
 }
-.days-temp {
-  margin-left: 195px;
-}
-.sun,
-.mon,
-.tue,
-.wed,
-.thu {
-  font-family: "Roboto Slab", serif;
-  font-weight: 500;
-  width: 50px;
-  margin-top: -45px;
-  margin-left: 195px;
-}
-.git-link {
-  font-family: "Roboto Slab", serif;
-  font-size: 15px;
-  margin-left: 550px;
-}
+
 .weatherapp {
   border: 5px solid #d9f2ff;
   border-radius: 20px;
-  margin: 35px auto;
-  padding: 5px;
-  width: 850px;
+  padding: 15px;
+}
+.container {
+  width: 860px;
+  margin: 45px auto;
+}
+.name {
+  font-family: "Roboto Slab", serif;
+  font-size: 15px;
+  font-weight: 200;
+
+  margin-left: 150px;
+  padding: 150px;
 }
