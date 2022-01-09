@@ -14,10 +14,11 @@ let day = days[now.getDay()];
 
 h2.innerHTML = `${day} ${hours}:${minutes}`
 
-function displayForecast(){
+function displayForecast(response){
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
+  let days =["Sun", "Mon", "Tue", "Wed", "Thu","Fri"];
   let forecastHTML = `<div class="row">`;
-  let days =["Sun", "Mon", "Tue", "Wed", "Thu","Fri",];
   days.forEach(function(day){forecastHTML = forecastHTML + `
             <div class="col-2">
               <div class="weather-days">${day}</div>
@@ -37,19 +38,17 @@ function getForecast(coordinates){
   console.log(coordinates);
   let apiKey = "9b0cb71e79f417ebc7ae00e0534f9e30";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&unit=metric`;
-
 axios.get(apiUrl).then(displayForecast);
 }
-
+  
 
 function showTemperature(response) {
-  
    document.querySelector("#city").innerHTML = response.data.name;
    celsiusTemperature = response.data.main.temp;
    document.querySelector("#temperature").innerHTML = Math.round(celsiusTemperature);
    document.querySelector("#humidity").innerHTML = `Humidity: `+ (response.data.main.humidity)+` %`;
    document.querySelector("#wind").innerHTML = 'Wind: '+ Math.round(response.data.wind.speed)+` km/h`;
-   getForecast(response.data.coord);
+   
    let icon = document.querySelector("#icon");
    icon.setAttribute(
     "src",
@@ -83,8 +82,6 @@ function showCelsiusTemperature(event){
 
 
 let celsiusTemperature = null;
-
-displayForecast();
 
 let form = document.querySelector("form");
 form.addEventListener("submit", search);
