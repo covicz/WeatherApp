@@ -32,7 +32,7 @@ function displayForecast(response){
     forecastHTML = forecastHTML + `
             <div class="col-2">
               <div class="weather-days">${formatDay(forecastDay.dt)}</div>
-              <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="" width="40px" />
+              <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="" width="40" />
               <div class="temp-days">
                 <span class="temp-days-max">${Math.round(forecastDay.temp.max)}°</span>
                 <span class="temp-days-min">${Math.round(forecastDay.temp.min)}°</span>
@@ -45,7 +45,6 @@ function displayForecast(response){
   forecastElement.innerHTML = forecastHTML;
 }
 function getForecast(coordinates){
-  console.log(coordinates);
   let apiKey = "9b0cb71e79f417ebc7ae00e0534f9e30";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&unit=metric`;
 axios.get(apiUrl).then(displayForecast);
@@ -78,29 +77,14 @@ axios.get(apiUrl).then(showTemperature);
  
 }
 
-function showFahrenheitTemperature(event){
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  let fahrenheitTemperature = (celsiusTemperature*9)/5+32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-function showCelsiusTemperature(event){
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-
-let celsiusTemperature = null;
-
 let form = document.querySelector("form");
 form.addEventListener("submit", search);
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", showCelsiusTemperature);
+
+
+
+
 
 
 
