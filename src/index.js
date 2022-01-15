@@ -34,7 +34,7 @@ function displayForecast(response){
               <div class="weather-days">${formatDay(forecastDay.dt)}</div>
               <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="" width="40" />
               <div class="temp-days">
-                <span class="temp-days-max"> ${Math.round(forecastDay.temp.max)}°</span>
+                <span class="temp-days-max"> ${Math.round(forecastDay.temp.max)}° /</span>
                 <span class="temp-days-min">${Math.round(forecastDay.temp.min)}°</span>
               </div>
             </div>
